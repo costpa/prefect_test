@@ -10,8 +10,8 @@ def say_hello():
     logger.info("Hello from ikeade")
 
 with Flow("hello_ikeade", storage=Docker()) as flow:
-    flow.run_config = DockerRun(labels=["intern_dev"])
+    flow.run_config = DockerRun(labels=["ikea_de"])
     say_hello()
 
-flow.register(project_name="intern")
+flow.register(project_name="ikea_de")
 #flow.run()
