@@ -13,6 +13,6 @@ with Flow("flow_from_git", storage=Docker()) as flow:
     flow.run_config = DockerRun(labels=["intern_dev"])
     say_hello()
 
-flow.register(project_name="intern")
-#flow.run()
+#flow.register(project_name="intern")
+flow.run()
 
