@@ -13,5 +13,5 @@ with Flow("hello_tchibo", storage=Docker()) as flow:
     flow.run_config = DockerRun(labels=["tchibo"])
     say_hello()
 
-flow.register(project_name="tchibo")
-#flow.run()
+#flow.register(project_name="tchibo")
+flow.run()
