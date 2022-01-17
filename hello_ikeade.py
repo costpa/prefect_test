@@ -19,5 +19,5 @@ with Flow("hello_ikeade", storage=Docker()) as flow:
     flow.run_config = DockerRun(labels=["ikea_de"])
     say_hello()
 
-flow.register(project_name="ikea_de")
-#flow.run()
+#flow.register(project_name="ikea_de")
+flow.run()
