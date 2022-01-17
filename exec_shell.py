@@ -20,7 +20,7 @@ def exec_shell_script():
 #)  
 
 #with Flow("exec_shell", storage=Docker()) as flow:   
-with Flow("write_file", as flow:
+with Flow("write_file") as flow:
     #config run for docker and labels
     #flow.run_config = DockerRun(labels=["ikea_de"])
     exec_shell_script()
