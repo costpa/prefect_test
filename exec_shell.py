@@ -17,5 +17,5 @@ with Flow("exec_shell", storage=Docker()) as flow:
     flow.run_config = DockerRun(labels=["ikea_de"])
     exec_shell_script()
 
-#flow.register(project_name="ikea_de")
-flow.run()
+flow.register(project_name="ikea_de")
+#flow.run()
