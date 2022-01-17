@@ -2,8 +2,8 @@ import prefect
 from prefect import task, Flow
 import subprocess
 
-from prefect.storage import Docker
-from prefect.run_configs import DockerRun
+#from prefect.storage import Docker
+#from prefect.run_configs import DockerRun
 
 #from datetime import timedelta, datetime
 #from prefect.schedules import IntervalSchedule
@@ -17,11 +17,12 @@ def exec_shell_script():
 #schedule = IntervalSchedule(
 #    start_date=datetime.utcnow() + timedelta(seconds=1),
 #    interval=timedelta(minutes=1),
-#)    
-    
-with Flow("exec_shell", storage=Docker()) as flow:
+#)  
+
+#with Flow("exec_shell", storage=Docker()) as flow:   
+with Flow("write_file", as flow:
     #config run for docker and labels
-    flow.run_config = DockerRun(labels=["ikea_de"])
+    #flow.run_config = DockerRun(labels=["ikea_de"])
     exec_shell_script()
 
 #flow.register(project_name="ikea_de")
