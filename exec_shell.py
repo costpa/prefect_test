@@ -1,7 +1,7 @@
 import prefect
 from prefect import task, Flow
 
-#from prefect.storage import Docker
+from prefect.storage import Docker
 from prefect.run_configs import DockerRun
 
 
@@ -11,7 +11,7 @@ def exec_shell_script():
     logger.info("I run a shell script now")
     subprocess.call(['sh', './date_to_text.sh'])
 
-with Flow("exec_shell") as flow:
+with Flow("exec_shell", storage=Docker()) as flow:
     #config run for docker and labels
     flow.run_config = DockerRun(labels=["ikea_de"])
     exec_shell_script()
